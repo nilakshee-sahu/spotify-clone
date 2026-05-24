@@ -178,7 +178,7 @@ body{
 .sidebar{
     background-color: #121212;
     width: 400px;
-    height: 92%;
+    height: 91%;
     border-radius: 1rem; /*1rem = 16px*/
     margin-left: 0.5rem;
 }
@@ -298,7 +298,7 @@ body{
 /*MAIN CONTENT SECTION*/
 
 .main-content{
-    height: 92%;
+    height: 91%;
     background-color: #121212;
     flex: 1;
     border-radius: 1rem;
@@ -320,9 +320,7 @@ body{
     justify-content: space-between;
     align-items: center;
     height: 3rem;
-    margin-top: 1rem;
-    margin-left: 0.75rem;
-    margin-right: 2rem;
+    margin: 1rem 2rem 1rem 0.75rem;
 }
 
 .heading span{
@@ -502,7 +500,7 @@ body{
     position: fixed;
     
     width: 100%;
-    height: 4.25rem;
+    height: 5rem;
 
     display: flex;
     justify-content: space-between;
@@ -511,14 +509,53 @@ body{
 
 .album{
     width: 25%;
+    display: flex;
+}
+
+.album img{
+    height: 3.5rem;
+    padding-left: 1rem;
+}
+
+.album .icon{
+    height: 1.75rem;
+    margin-top: 0.75rem;
+}
+
+.album .icon:hover{
+    height: 1.8rem;
+    cursor: pointer;
+}
+
+.song-details{
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+
+    padding: 0.5rem 0 0 1rem;
+    gap: 0.25rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.song-details span:hover{
+    cursor: pointer;
+    text-decoration: underline;
+    color: white;
+}
+
+.title{
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.artists-name{
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #b3b3b3;
 }
 
 .player{
     width: 50%;
-}
-
-.controls{
-    width: 25%;
 }
 
 .player-contols{
@@ -529,12 +566,14 @@ body{
 
 .player-control-icon{
     height: 1rem; 
-    margin-right: 1.75rem;
+    margin-left: 1.75rem;
+    margin-bottom: 0.5rem;
     opacity: 0.7;
 }
 
 .player-control-icon:hover{
-    opacity: 0.1;
+    opacity: 1;
+    cursor: pointer;
 }
 
 .playback-bar{
@@ -543,8 +582,14 @@ body{
     align-items: center;
 }
 
+.time{
+    font-size: 0.7rem;
+    padding: 0 0.5rem;
+    color: #b3b3b3;
+}
+
 .progress-bar{
-    width: 70%;
+    width: 65%;
     appearance: none;
     background-color: transparent;
     cursor: pointer;
@@ -554,15 +599,28 @@ body{
     width: 100%;
     height: 0.3rem;
     border-radius: 100px;
-    background: linear-gradient(green 0 0) no-repeat #232323;
+    background: linear-gradient(white 0 0) no-repeat #232323;
     background-size: 50% 100%; 
 }
 
 .progress-bar::-webkit-slider-thumb{
     appearance: none;
-    height: 0.75rem;
-    width: 0.75rem;
-    background-color: white;
-    border-radius: 50%;
-    margin-top: -3px;
+}
+
+.controls{
+    width: 25%;
+    display: flex;
+    justify-content: end;
+    
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+}
+
+.controls .icon{
+    height: 2rem;
+    margin-top: 0.75rem;
+}
+.controls .bar-icon{
+    height: 1.5rem;
+    padding-top: 0.25rem;
 }
